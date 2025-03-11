@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=3 uid="uid://b1i8bp5ylhj61"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_vue75"]
+font_size = 100
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Trying for Realism"
+label_settings = SubResource("LabelSettings_vue75")
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 40.0
+offset_top = 320.0
+offset_right = 574.0
+offset_bottom = 552.0
+tooltip_text = "starts the game"
+text = "Play"
+
+[node name="OptionsButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 624.0
+offset_top = 232.0
+offset_right = 936.0
+offset_bottom = 359.0
+tooltip_text = "opens options menu for the game"
+text = "Options"
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 2
+offset_left = 976.0
+offset_top = 376.0
+offset_right = 1096.0
+offset_bottom = 456.0
+tooltip_text = "quits the game"
+text = "Quit"
