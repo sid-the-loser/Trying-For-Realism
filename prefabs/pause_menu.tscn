@@ -1,0 +1,91 @@
+[gd_scene load_steps=3 format=3 uid="uid://drm0d7dcp06mr"]
+
+[ext_resource type="Script" uid="uid://c58geuixlrbfp" path="res://scripts/pause_menu.gd" id="1_hf53u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_8vm25"]
+font_size = 50
+
+[node name="PauseMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hf53u")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.5
+offset_right = 45.5
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "(Not) Paused Menu"
+label_settings = SubResource("LabelSettings_8vm25")
+
+[node name="ResumeButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -568.0
+offset_top = -108.0
+offset_right = -99.0
+offset_bottom = 27.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Resume"
+
+[node name="OptionsButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -360.0
+offset_top = 92.0
+offset_right = 271.0
+offset_bottom = 156.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Options"
+
+[node name="MainMenuButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 48.0
+offset_top = -180.0
+offset_right = 259.0
+offset_bottom = 33.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Back to Main Menu"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -98.0
+offset_top = -23.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "hello there :)"
+horizontal_alignment = 2
+
+[connection signal="pressed" from="ResumeButton" to="." method="_on_resume_button_pressed"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="MainMenuButton" to="." method="_on_main_menu_button_pressed"]
