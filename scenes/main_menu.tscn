@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://b1i8bp5ylhj61"]
+[gd_scene load_steps=3 format=3 uid="uid://b1i8bp5ylhj61"]
+
+[ext_resource type="Script" uid="uid://sjwahhndemh4" path="res://scripts/main_menu.gd" id="1_l6cm7"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_vue75"]
 font_size = 100
@@ -10,6 +12,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_l6cm7")
 
 [node name="Label" type="Label" parent="."]
 layout_mode = 1
@@ -49,3 +52,7 @@ offset_right = 1096.0
 offset_bottom = 456.0
 tooltip_text = "quits the game"
 text = "Quit"
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
