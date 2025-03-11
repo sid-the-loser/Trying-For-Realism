@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://dtceku7nj72lb"]
+
+[ext_resource type="Script" uid="uid://dinwxvxcht8xx" path="res://scripts/component scripts/user_controlled.gd" id="1_72ieh"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_fp3wc"]
+
+[node name="Player" type="CharacterBody3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("CapsuleShape3D_fp3wc")
+
+[node name="Head" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.867614, 0)
+
+[node name="Camera3D" type="Camera3D" parent="Head"]
+
+[node name="UserControlled" type="Node" parent="." node_paths=PackedStringArray("character_body", "head")]
+script = ExtResource("1_72ieh")
+character_body = NodePath("..")
+head = NodePath("../Head")
+metadata/_custom_type_script = "uid://dinwxvxcht8xx"
